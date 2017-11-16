@@ -9,7 +9,6 @@ sudo apt-get install jq
 sudo apt-get install ruby-full
 sudo apt-get install libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
 
-clear
 
 #Don't forget to set up AWS credentials!
 echo "Don't forget to set up AWS credentials!"
@@ -23,10 +22,8 @@ sudo apt-get install python-setuptools
 mkdir /home/tools
 cd /home/tools/
 
-clear
 
 echo "installing JSParser"
-#install JSParser
 git clone https://github.com/nahamsec/JSParser.git
 cd JSParser*
 python setup.py install
@@ -36,7 +33,7 @@ echo "done"
 echo "installing Sublist3r"
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r*
-sudo pip install -r requirements.txt
+pip install -r requirements.txt
 cd /home/tools/
 echo "done"
 
@@ -50,7 +47,7 @@ echo "done"
 echo "installing wpscan"
 git clone https://github.com/wpscanteam/wpscan.git
 cd wpscan*
-sudo gem install bundler && bundle install --without test
+gem install bundler && bundle install --without test
 cd /home/tools/
 echo "done"
 
@@ -58,7 +55,6 @@ echo "installing dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
 cd /home/tools/
 echo "done"
-
 
 
 echo "installing lazys3"
@@ -90,8 +86,7 @@ git clone https://github.com/guelfoweb/knock.git
 cd /home/tools/
 echo "done"
 
-clear
 
-"echo all done"
+echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in /home/tools"
 ls -la
 echo "One last time: don't forget to set up AWS credentials in ~/.aws/!"
