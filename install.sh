@@ -18,29 +18,29 @@ echo "Don't forget to set up AWS credentials!"
 sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 sudo apt-get install python-setuptools
 
-#create a tools folder in /home
-mkdir /home/tools
-cd /home/tools/
+#create a tools folder in ~/
+mkdir ~/tools
+cd ~/tools/
 
 
 echo "installing JSParser"
 git clone https://github.com/nahamsec/JSParser.git
 cd JSParser*
 python setup.py install
-cd /home/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing Sublist3r"
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r*
 pip install -r requirements.txt
-cd /home/tools/
+cd ~/tools/
 echo "done"
 
 
 echo "installing teh_s3_bucketeers"
 git clone https://github.com/tomdev/teh_s3_bucketeers.git
-cd /home/tools/
+cd ~/tools/
 echo "done"
 
 
@@ -48,23 +48,23 @@ echo "installing wpscan"
 git clone https://github.com/wpscanteam/wpscan.git
 cd wpscan*
 gem install bundler && bundle install --without test
-cd /home/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
-cd /home/tools/
+cd ~/tools/
 echo "done"
 
 
 echo "installing lazys3"
 git clone https://github.com/nahamsec/lazys3.git
-cd /home/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing virtual host discovery"
 git clone https://github.com/jobertabma/virtual-host-discovery.git
-cd /home/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing bash_profile aliases from recon_profile"
@@ -72,21 +72,21 @@ git clone https://github.com/nahamsec/recon_profile/bash_profile.git
 cd recon_profile
 cat bash_profile >> ~/.bash_profile
 source ~/.bash_profile
-cd /home/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing sqlmap"
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
-cd /home/tools/
+cd ~/tools/
 echo "done"
 
 echo "installing knock.py"
 sudo apt-get install python-dnspython
 git clone https://github.com/guelfoweb/knock.git
-cd /home/tools/
+cd ~/tools/
 echo "done"
 
 
-echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in /home/tools"
+echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
 echo "One last time: don't forget to set up AWS credentials in ~/.aws/!"
