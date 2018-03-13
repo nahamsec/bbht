@@ -87,7 +87,7 @@ cd ~/tools/
 echo "done"
 
 echo "installing lazyrecon"
-git clone git@github.com:nahamsec/lazyrecon.git
+git clone https://github.com/nahamsec/lazyrecon.git
 cd ~/tools/
 echo "done"
 
