@@ -86,6 +86,11 @@ git clone https://github.com/guelfoweb/knock.git
 cd ~/tools/
 echo "done"
 
+echo "installing lazyrecon"
+git clone git@github.com:nahamsec/lazyrecon.git
+cd ~/tools/
+echo "done"
+
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
