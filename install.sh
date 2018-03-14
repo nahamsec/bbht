@@ -67,6 +67,11 @@ git clone https://github.com/jobertabma/virtual-host-discovery.git
 cd ~/tools/
 echo "done"
 
+echo "installing web screenshot"
+git clone https://github.com/maaaaz/webscreenshot.git
+cd ~/tools/
+echo "done"
+
 echo "installing bash_profile aliases from recon_profile"
 git clone https://github.com/nahamsec/recon_profile.git
 cd recon_profile
