@@ -1,22 +1,22 @@
 sudo apt-get update
 sudo apt-get -y upgrade
-sudo apt-get install git
+sudo apt-get install -y git
 sudo apt-get install -y python3-pip
-apt install python-pip
-sudo apt-get install libcurl4-openssl-dev
-sudo apt-get install libssl-dev
-sudo apt-get install jq
-sudo apt-get install ruby-full
-sudo apt-get install libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
+apt install -y python-pip
+sudo apt-get install -y libcurl4-openssl-dev
+sudo apt-get install -y libssl-dev
+sudo apt-get install -y jq
+sudo apt-get install -y ruby-full
+sudo apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
 
 
 #Don't forget to set up AWS credentials!
 echo "Don't forget to set up AWS credentials!"
-apt install awscli
+apt install -y awscli
 echo "Don't forget to set up AWS credentials!"
 
-sudo apt-get install build-essential libssl-dev libffi-dev python-dev
-sudo apt-get install python-setuptools
+sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev
+sudo apt-get install -y python-setuptools
 
 #create a tools folder in ~/
 mkdir ~/tools
