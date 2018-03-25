@@ -8,7 +8,7 @@ sudo apt-get install libssl-dev
 sudo apt-get install jq
 sudo apt-get install ruby-full
 sudo apt-get install libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
-
+sudo apt-get install rename
 
 #Don't forget to set up AWS credentials!
 echo "Don't forget to set up AWS credentials!"
