@@ -28,7 +28,7 @@ cd ~/tools/
 echo "installing JSParser"
 git clone https://github.com/nahamsec/JSParser.git
 cd JSParser*
-python setup.py install
+sudo python setup.py install
 cd ~/tools/
 echo "done"
 
