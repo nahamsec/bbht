@@ -96,6 +96,9 @@ git clone https://github.com/nahamsec/lazyrecon.git
 cd ~/tools/
 echo "done"
 
+echo "installing nmap"
+sudo apt-get install nmap
+echo "done"
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
