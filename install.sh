@@ -1,7 +1,9 @@
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get install -y git
+sudo apt-get install rename
 sudo apt-get install -y python3-pip
+
 apt install -y python-pip
 sudo apt-get install -y libcurl4-openssl-dev
 sudo apt-get install -y libssl-dev
