@@ -27,14 +27,14 @@ cd ~/tools/
 
 echo "installing JSParser"
 git clone https://github.com/nahamsec/JSParser.git
-cd JSParser*
+cd JSParser
 sudo python setup.py install
 cd ~/tools/
 echo "done"
 
 echo "installing Sublist3r"
 git clone https://github.com/aboul3la/Sublist3r.git
-cd Sublist3r*
+cd Sublist3r
 pip install -r requirements.txt
 cd ~/tools/
 echo "done"
@@ -48,7 +48,7 @@ echo "done"
 
 echo "installing wpscan"
 git clone https://github.com/wpscanteam/wpscan.git
-cd wpscan*
+cd wpscan
 sudo gem install bundler && bundle install --without test
 cd ~/tools/
 echo "done"
