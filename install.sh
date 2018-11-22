@@ -103,6 +103,21 @@ echo "installing nmap"
 sudo apt-get install nmap
 echo "done"
 
+echo "installing massdns"
+sudo apt-get install libldns-dev
+git clone https://github.com/blechschmidt/massdns.git
+cd ~/tools/massdns
+make
+cd ~/tools/
+echo "done"
+
+echo "installing asnlookup"
+git clone https://github.com/yassineaboukir/asnlookup.git
+cd ~/tools/asnlookup
+pip install -r requirements.txt
+cd ~/tools/
+echo "done"
+
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
 echo "One last time: don't forget to set up AWS credentials in ~/.aws/!"
