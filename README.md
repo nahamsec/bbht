@@ -15,6 +15,8 @@ Bug Bounty Hunting Tools is a script to install the most popular tools used whil
 - virtual-host-discovery
 - wpscan
 - webscreenshot
+- Massdns
+- Asnlookup
 
 
 This script also grabs the aliases created and published here:
