@@ -96,9 +96,6 @@ echo "done"
 
 echo "installing lazyrecon"
 git clone https://github.com/nahamsec/lazyrecon.git
-cd ~/tools/lazyrecon
-wget https://github.com/plenumlab/lazyrecon/raw/master/all.zip
-unzip all.zip
 cd ~/tools/
 echo "done"
 
