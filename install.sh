@@ -11,7 +11,7 @@ sudo apt-get install -y libssl-dev
 sudo apt-get install -y jq
 sudo apt-get install -y ruby-full
 sudo apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
-
+sudo apt-get install -y golang-go
 
 #Don't forget to set up AWS credentials!
 echo "Don't forget to set up AWS credentials!"
@@ -115,6 +115,35 @@ echo "installing asnlookup"
 git clone https://github.com/yassineaboukir/asnlookup.git
 cd ~/tools/asnlookup
 pip install -r requirements.txt
+cd ~/tools/
+echo "done"
+
+echo "installing interlace"
+git clone https://github.com/codingo/Interlace.git
+cd ~/tools/Interlace
+python3 setup.py install
+cd ~/tools/
+echo "done"
+
+
+echo "installing httprobe"
+go get -u github.com/tomnomnom/httprobe 
+echo "done"
+
+echo "installing unfurl"
+go get -u github.com/tomnomnom/unfurl 
+echo "done"
+
+echo "installing waybackurls"
+go get github.com/tomnomnom/waybackurls
+echo "done"
+
+echo "downloading Seclists"
+cd ~/tools/
+git clone https://github.com/danielmiessler/SecLists.git
+cd ~/tools/SecLists/Discovery/DNS/
+##THIS FILE BREAKS MASSDNS NEEDS TO BE CLEANED
+cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
 
