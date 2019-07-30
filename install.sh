@@ -65,14 +65,8 @@ echo "done"
 
 #install chromium
 echo "Installing Chromium"
-apt-get install unzip
-cd ~/tools/
-git clone https://github.com/scheib/chromium-latest-linux.git
-cd chromium-latest-linux
-bash update-and-run.sh
-cd ~/tools
+sudo snap install chromium
 echo "done"
-
 
 echo "installing JSParser"
 git clone https://github.com/nahamsec/JSParser.git
