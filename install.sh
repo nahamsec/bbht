@@ -1,5 +1,6 @@
-sudo apt-get update
-sudo apt-get upgrade
+#!/bin/bash
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 sudo apt-get install -y git
 sudo apt-get install -y rename
@@ -11,31 +12,66 @@ sudo apt-get install -y libssl-dev
 sudo apt-get install -y jq
 sudo apt-get install -y ruby-full
 sudo apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
+sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev
+sudo apt-get install -y python-setuptools
 
+#install go
+if [[ -z "$GOPATH" ]];then
+echo "It looks like go is not installed, would you like to install it now"
+PS3="Please select an option : "
+choices=("yes" "no" )
+select choice in "${choices[@]}"; do
+        case $choice in
+                yes)
 
+					echo "Installing Golang"
+					wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
+					sudo tar -xvf go1.12.7.linux-amd64.tar.gz
+					sudo mv go /usr/local
+					export GOROOT=/usr/local/go
+					export GOPATH=$HOME/go
+					export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+					source ~/.profile
+					
+					echo "Don't forget to finish the installation steps after the script"
+					sleep 1
+					break
+					;;
+				no)
+					echo "Please install go and rerun this script"
+					echo "Aborting installation..."
+					exit 1
+					;;
+	esac	
+done
+fi
 
-
-#Get phantomjs requirements & install
-sudo apt-get install -y build-essential chrpath libssl-dev libxft-dev
-sudo apt-get install -y libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev
-wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
-tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2 -C /usr/local/share/
-sudo ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
-
-#Source profile for go and phantomjs
-sudo source ~/.profile
 
 #Don't forget to set up AWS credentials!
 echo "Don't forget to set up AWS credentials!"
 apt install -y awscli
 echo "Don't forget to set up AWS credentials!"
 
-sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev
-sudo apt-get install -y python-setuptools
+
 
 #create a tools folder in ~/
 mkdir ~/tools
 cd ~/tools/
+
+#install aquatone
+echo "Installing Aquatone"
+go get github.com/michenriksen/aquatone
+echo "done"
+
+#install chromium
+echo "Installing Chromium"
+apt-get install unzip
+cd ~/tools/
+git clone https://github.com/scheib/chromium-latest-linux.git
+cd chromium-latest-linux
+bash update-and-run.sh
+cd ~/tools
+echo "done"
 
 
 echo "installing JSParser"
@@ -82,10 +118,6 @@ git clone https://github.com/jobertabma/virtual-host-discovery.git
 cd ~/tools/
 echo "done"
 
-echo "installing web screenshot"
-git clone https://github.com/maaaaz/webscreenshot.git
-cd ~/tools/
-echo "done"
 
 echo "installing bash_profile aliases from recon_profile"
 git clone https://github.com/nahamsec/recon_profile.git
@@ -158,6 +190,8 @@ cd ~/tools/SecLists/Discovery/DNS/
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
+
+source ~/.profile
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
