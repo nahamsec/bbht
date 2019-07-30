@@ -2,7 +2,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 sudo apt-get install -y git
-sudo apt-get install rename
+sudo apt-get install -y rename
 sudo apt-get install -y python3-pip
 
 apt install -y python-pip
@@ -11,7 +11,19 @@ sudo apt-get install -y libssl-dev
 sudo apt-get install -y jq
 sudo apt-get install -y ruby-full
 sudo apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
-sudo apt-get install -y golang-go
+
+
+
+
+#Get phantomjs requirements & install
+sudo apt-get install -y build-essential chrpath libssl-dev libxft-dev
+sudo apt-get install -y libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev
+wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2 -C /usr/local/share/
+sudo ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
+
+#Source profile for go and phantomjs
+sudo source ~/.profile
 
 #Don't forget to set up AWS credentials!
 echo "Don't forget to set up AWS credentials!"
@@ -142,7 +154,7 @@ echo "downloading Seclists"
 cd ~/tools/
 git clone https://github.com/danielmiessler/SecLists.git
 cd ~/tools/SecLists/Discovery/DNS/
-##THIS FILE BREAKS MASSDNS NEEDS TO BE CLEANED
+##THIS FILE BREAKS MASSDNS AND NEEDS TO BE CLEANED
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
