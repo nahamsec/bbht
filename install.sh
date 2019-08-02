@@ -15,6 +15,18 @@ sudo apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ru
 sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev
 sudo apt-get install -y python-setuptools
 
+
+
+echo "installing bash_profile aliases from recon_profile"
+git clone https://github.com/nahamsec/recon_profile.git
+cd recon_profile
+cat bash_profile >> ~/.bash_profile
+source ~/.bash_profile
+cd ~/tools/
+echo "done"
+
+
+
 #install go
 if [[ -z "$GOPATH" ]];then
 echo "It looks like go is not installed, would you like to install it now"
@@ -31,9 +43,10 @@ select choice in "${choices[@]}"; do
 					export GOROOT=/usr/local/go
 					export GOPATH=$HOME/go
 					export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-					source ~/.profile
-					
-					echo "Don't forget to finish the installation steps after the script"
+					echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile
+					echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
+					echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
+					source ~/.bash_profile
 					sleep 1
 					break
 					;;
@@ -113,14 +126,6 @@ cd ~/tools/
 echo "done"
 
 
-echo "installing bash_profile aliases from recon_profile"
-git clone https://github.com/nahamsec/recon_profile.git
-cd recon_profile
-cat bash_profile >> ~/.bash_profile
-source ~/.bash_profile
-cd ~/tools/
-echo "done"
-
 echo "installing sqlmap"
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
 cd ~/tools/
@@ -185,7 +190,7 @@ cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
 
-source ~/.profile
+
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
