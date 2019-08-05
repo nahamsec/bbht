@@ -2,11 +2,7 @@
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-sudo apt-get install -y git
-sudo apt-get install -y rename
-sudo apt-get install -y python3-pip
 
-apt install -y python-pip
 sudo apt-get install -y libcurl4-openssl-dev
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y jq
@@ -14,8 +10,13 @@ sudo apt-get install -y ruby-full
 sudo apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
 sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev
 sudo apt-get install -y python-setuptools
-
-
+sudo apt-get install -y libldns-dev
+sudo apt-get install -y python3-pip
+sudo apt-get install -y python-pip
+sudo apt-get install -y python-dnspython
+sudo apt-get install -y git
+sudo apt-get install -y rename
+sudo apt-get install -y xargs
 
 echo "installing bash_profile aliases from recon_profile"
 git clone https://github.com/nahamsec/recon_profile.git
@@ -132,7 +133,6 @@ cd ~/tools/
 echo "done"
 
 echo "installing knock.py"
-sudo apt-get install python-dnspython
 git clone https://github.com/guelfoweb/knock.git
 cd ~/tools/
 echo "done"
@@ -143,11 +143,10 @@ cd ~/tools/
 echo "done"
 
 echo "installing nmap"
-sudo apt-get install nmap
+sudo apt-get install -y nmap
 echo "done"
 
 echo "installing massdns"
-sudo apt-get install libldns-dev
 git clone https://github.com/blechschmidt/massdns.git
 cd ~/tools/massdns
 make
@@ -160,8 +159,6 @@ cd ~/tools/asnlookup
 pip install -r requirements.txt
 cd ~/tools/
 echo "done"
-
-
 
 echo "installing httprobe"
 go get -u github.com/tomnomnom/httprobe 
