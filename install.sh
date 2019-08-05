@@ -161,13 +161,6 @@ pip install -r requirements.txt
 cd ~/tools/
 echo "done"
 
-echo "installing interlace"
-pip3 install setuptools
-git clone https://github.com/codingo/Interlace.git
-cd ~/tools/Interlace
-python3 setup.py install
-cd ~/tools/
-echo "done"
 
 
 echo "installing httprobe"
