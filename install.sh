@@ -38,15 +38,15 @@ select choice in "${choices[@]}"; do
                 yes)
 
 					echo "Installing Golang"
-					wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
-					sudo tar -xvf go1.12.7.linux-amd64.tar.gz
-					sudo mv go /usr/local
+
+                    wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
+                    sudo tar -zxvf go1.13.linux-amd64.tar.gz -C /usr/local/
 					export GOROOT=/usr/local/go
 					export GOPATH=$HOME/go
 					export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 					echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile
-					echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
-					echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
+					echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile
+					echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile
 					source ~/.bash_profile
 					sleep 1
 					break
@@ -56,7 +56,7 @@ select choice in "${choices[@]}"; do
 					echo "Aborting installation..."
 					exit 1
 					;;
-	esac	
+	esac
 done
 fi
 
@@ -161,11 +161,11 @@ cd ~/tools/
 echo "done"
 
 echo "installing httprobe"
-go get -u github.com/tomnomnom/httprobe 
+go get -u github.com/tomnomnom/httprobe
 echo "done"
 
 echo "installing unfurl"
-go get -u github.com/tomnomnom/unfurl 
+go get -u github.com/tomnomnom/unfurl
 echo "done"
 
 echo "installing waybackurls"
