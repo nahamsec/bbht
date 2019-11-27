@@ -32,14 +32,14 @@ echo "done"
 if [[ -z "$GOPATH" ]];then
 echo "It looks like go is not installed, would you like to install it now"
 PS3="Please select an option : "
-choices=("yes" "no" )
+choices=("yes" "no")
 select choice in "${choices[@]}"; do
         case $choice in
                 yes)
 
 					echo "Installing Golang"
-					wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
-					sudo tar -xvf go1.12.7.linux-amd64.tar.gz
+					wget https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
+					sudo tar -xvf go1.13.4.linux-amd64.tar.gz
 					sudo mv go /usr/local
 					export GOROOT=/usr/local/go
 					export GOPATH=$HOME/go
