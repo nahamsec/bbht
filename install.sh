@@ -2,7 +2,6 @@
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-
 sudo apt-get install -y libcurl4-openssl-dev
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y jq
@@ -18,6 +17,10 @@ sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
 
+#create a tools folder in ~/
+mkdir ~/tools
+cd ~/tools/
+
 echo "installing bash_profile aliases from recon_profile"
 git clone https://github.com/nahamsec/recon_profile.git
 cd recon_profile
@@ -25,8 +28,6 @@ cat bash_profile >> ~/.bash_profile
 source ~/.bash_profile
 cd ~/tools/
 echo "done"
-
-
 
 #install go
 if [[ -z "$GOPATH" ]];then
@@ -60,17 +61,10 @@ select choice in "${choices[@]}"; do
 done
 fi
 
-
 #Don't forget to set up AWS credentials!
 echo "Don't forget to set up AWS credentials!"
-apt install -y awscli
+sudo apt-get install -y awscli
 echo "Don't forget to set up AWS credentials!"
-
-
-
-#create a tools folder in ~/
-mkdir ~/tools
-cd ~/tools/
 
 #install aquatone
 echo "Installing Aquatone"
@@ -96,12 +90,10 @@ pip install -r requirements.txt
 cd ~/tools/
 echo "done"
 
-
 echo "installing teh_s3_bucketeers"
 git clone https://github.com/tomdev/teh_s3_bucketeers.git
 cd ~/tools/
 echo "done"
-
 
 echo "installing wpscan"
 git clone https://github.com/wpscanteam/wpscan.git
@@ -115,7 +107,6 @@ git clone https://github.com/maurosoria/dirsearch.git
 cd ~/tools/
 echo "done"
 
-
 echo "installing lazys3"
 git clone https://github.com/nahamsec/lazys3.git
 cd ~/tools/
@@ -125,7 +116,6 @@ echo "installing virtual host discovery"
 git clone https://github.com/jobertabma/virtual-host-discovery.git
 cd ~/tools/
 echo "done"
-
 
 echo "installing sqlmap"
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
@@ -184,8 +174,6 @@ cd ~/tools/SecLists/Discovery/DNS/
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
-
-
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
