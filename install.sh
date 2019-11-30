@@ -75,6 +75,9 @@ cd ~/tools/
 #install aquatone
 echo "Installing Aquatone"
 go get github.com/michenriksen/aquatone
+cd ~/go/bin/
+sudo mv aquatone /usr/local/bin
+cd ~/tools/
 echo "done"
 
 #install chromium
@@ -162,14 +165,23 @@ echo "done"
 
 echo "installing httprobe"
 go get -u github.com/tomnomnom/httprobe 
+cd ~/go/bin/
+sudo mv httprobe /usr/local/bin
+cd ~/tools/
 echo "done"
 
 echo "installing unfurl"
-go get -u github.com/tomnomnom/unfurl 
+go get -u github.com/tomnomnom/unfurl
+cd ~/go/bin/
+sudo mv unfurl /usr/local/bin
+cd ~/tools/
 echo "done"
 
 echo "installing waybackurls"
 go get github.com/tomnomnom/waybackurls
+cd ~/go/bin/
+sudo mv waybackurls /usr/local/bin
+cd ~/tools/
 echo "done"
 
 echo "installing crtndstry"
