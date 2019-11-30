@@ -62,7 +62,7 @@ fi
 
 
 #Don't forget to set up AWS credentials!
-echo "Don't forget to set up AWS credentials!"
+echo "Installing AWS Cli"
 apt install -y awscli
 echo "Don't forget to set up AWS credentials!"
 
@@ -74,7 +74,7 @@ cd ~/tools/
 
 #install aquatone
 echo "Installing Aquatone"
-go get github.com/michenriksen/aquatone
+sudo go get github.com/michenriksen/aquatone
 echo "done"
 
 #install chromium
@@ -161,15 +161,15 @@ cd ~/tools/
 echo "done"
 
 echo "installing httprobe"
-go get -u github.com/tomnomnom/httprobe 
+sudo go get -u github.com/tomnomnom/httprobe 
 echo "done"
 
 echo "installing unfurl"
-go get -u github.com/tomnomnom/unfurl 
+sudo go get -u github.com/tomnomnom/unfurl 
 echo "done"
 
 echo "installing waybackurls"
-go get github.com/tomnomnom/waybackurls
+sudo go get github.com/tomnomnom/waybackurls
 echo "done"
 
 echo "installing crtndstry"
