@@ -172,6 +172,10 @@ echo "installing waybackurls"
 go get github.com/tomnomnom/waybackurls
 echo "done"
 
+echo "installing crtndstry"
+git clone https://github.com/nahamsec/crtndstry.git
+echo "done"
+
 echo "downloading Seclists"
 cd ~/tools/
 git clone https://github.com/danielmiessler/SecLists.git
