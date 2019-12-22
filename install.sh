@@ -38,8 +38,8 @@ select choice in "${choices[@]}"; do
                 yes)
 
 					echo "Installing Golang"
-					wget https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
-					sudo tar -xvf go1.13.4.linux-amd64.tar.gz
+					wget https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
+					sudo tar -xvf go1.13.5.linux-amd64.tar.gz
 					sudo mv go /usr/local
 					export GOROOT=/usr/local/go
 					export GOPATH=$HOME/go
@@ -71,6 +71,8 @@ echo "Don't forget to set up AWS credentials!"
 #create a tools folder in ~/
 mkdir ~/tools
 cd ~/tools/
+
+
 
 #install aquatone
 echo "Installing Aquatone"
@@ -114,6 +116,7 @@ echo "installing dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
 cd ~/tools/
 echo "done"
+
 
 
 echo "installing lazys3"
@@ -160,6 +163,11 @@ pip install -r requirements.txt
 cd ~/tools/
 echo "done"
 
+echo "installing github subdomain"
+wget https://raw.githubusercontent.com/gwen001/github-search/master/github-subdomains.py
+cd ~/tools/
+echo "done"
+
 echo "installing httprobe"
 go get -u github.com/tomnomnom/httprobe 
 echo "done"
@@ -170,6 +178,19 @@ echo "done"
 
 echo "installing waybackurls"
 go get github.com/tomnomnom/waybackurls
+echo "done"
+
+echo "installing gobuster"
+go get github.com/OJ/gobuster
+echo "done"
+
+echo "installing subfinder"
+go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
+echo "done"
+
+echo "installing amass"
+export GO111MODULE=on
+go get -v -u github.com/OWASP/Amass/v3/...
 echo "done"
 
 echo "installing crtndstry"
@@ -184,7 +205,6 @@ cd ~/tools/SecLists/Discovery/DNS/
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
-
 
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
