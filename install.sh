@@ -18,12 +18,18 @@ sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
 
+
+#create a tools directory in ~/
+mkdir ~/tools
+cd ~/tools
+
+
+
 echo "installing bash_profile aliases from recon_profile"
 git clone https://github.com/nahamsec/recon_profile.git
 cd recon_profile
-cat bash_profile >> ~/.bash_profile
+cat .bash_profile >> ~/.bash_profile
 source ~/.bash_profile
-cd ~/tools/
 echo "done"
 
 
@@ -38,15 +44,15 @@ select choice in "${choices[@]}"; do
                 yes)
 
 					echo "Installing Golang"
-					wget https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
-					sudo tar -xvf go1.13.4.linux-amd64.tar.gz
+					wget https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
+					sudo tar -xvf go1.13.5.linux-amd64.tar.gz
 					sudo mv go /usr/local
 					export GOROOT=/usr/local/go
 					export GOPATH=$HOME/go
 					export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 					echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile
-					echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
-					echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
+					echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile
+					echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile
 					source ~/.bash_profile
 					sleep 1
 					break
@@ -56,7 +62,7 @@ select choice in "${choices[@]}"; do
 					echo "Aborting installation..."
 					exit 1
 					;;
-	esac	
+	esac
 done
 fi
 
@@ -66,11 +72,6 @@ echo "Don't forget to set up AWS credentials!"
 apt install -y awscli
 echo "Don't forget to set up AWS credentials!"
 
-
-
-#create a tools folder in ~/
-mkdir ~/tools
-cd ~/tools/
 
 #install aquatone
 echo "Installing Aquatone"
