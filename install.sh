@@ -180,6 +180,10 @@ echo "installing waybackurls"
 go get github.com/tomnomnom/waybackurls
 echo "done"
 
+echo "installing gobuster"
+go get github.com/OJ/gobuster
+echo "done"
+
 echo "installing subfinder"
 go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 echo "done"
