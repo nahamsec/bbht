@@ -19,9 +19,7 @@ sudo apt-get install -y rename
 sudo apt-get install -y xargs
 
 echo "installing bash_profile aliases from recon_profile"
-git clone https://github.com/nahamsec/recon_profile.git
-cd recon_profile
-cat bash_profile >> ~/.bash_profile
+cd ~ && wget https://raw.githubusercontent.com/nahamsec/recon_profile/master/.bash_profile # adding bash profile w/o cloning entire repo
 source ~/.bash_profile
 cd ~/tools/
 echo "done"
