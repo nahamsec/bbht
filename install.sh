@@ -38,8 +38,9 @@ select choice in "${choices[@]}"; do
                 yes)
 
 					echo "Installing Golang"
-					wget https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
-					sudo tar -xvf go1.13.4.linux-amd64.tar.gz
+					LATEST_GO=$(wget -qO- https://golang.org/dl/ | grep -oP 'go([0-9\.]+)\.linux-amd64\.tar\.gz' | head -n 1 | grep -oP 'go[0-9\.]+' | grep -oP '[0-9\.]+' | head -c -2)
+					wget https://dl.google.com/go/go$LATEST_GO.linux-amd64.tar.gz
+					sudo tar -xvf go$LATEST_GO.linux-amd64.tar.gz
 					sudo mv go /usr/local
 					export GOROOT=/usr/local/go
 					export GOPATH=$HOME/go
@@ -71,6 +72,12 @@ echo "Don't forget to set up AWS credentials!"
 #create a tools folder in ~/
 mkdir ~/tools
 cd ~/tools/
+
+#install subfinder
+echo "Installing subfinder"
+go get -u github.com/subfinder/subfinder
+echo -e "[+] Set up API keys for subfinder...if you wish to!"
+echo "done"
 
 #install aquatone
 echo "Installing Aquatone"
