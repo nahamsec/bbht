@@ -75,7 +75,7 @@ cd ~/tools/
 
 #install subfinder
 echo "Installing subfinder"
-go get -u github.com/subfinder/subfinder
+go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 echo -e "[+] Set up API keys for subfinder...if you wish to!"
 echo "done"
 
