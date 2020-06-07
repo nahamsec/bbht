@@ -89,13 +89,9 @@ sudo python setup.py install
 cd ~/tools/
 echo "done"
 
-echo "installing Sublist3r"
-git clone https://github.com/aboul3la/Sublist3r.git
-cd Sublist3r*
-pip install -r requirements.txt
-cd ~/tools/
+echo "installing Subfinder"
+go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 echo "done"
-
 
 echo "installing teh_s3_bucketeers"
 git clone https://github.com/tomdev/teh_s3_bucketeers.git
@@ -174,6 +170,21 @@ echo "done"
 
 echo "installing crtndstry"
 git clone https://github.com/nahamsec/crtndstry.git
+echo "done"
+
+echo "installing Subfinder"
+go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
+echo "done"
+
+
+echo "installing Arjun"
+git clone https://github.com/s0md3v/Arjun.git
+cd ~/tools/
+echo "done"
+
+
+echo "installing ffuf"
+go get github.com/ffuf/ffuf
 echo "done"
 
 echo "downloading Seclists"
