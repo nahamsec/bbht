@@ -185,6 +185,15 @@ cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
 
+echo "Installing Dirhunt"
+sudo pip3 install dirhunt
+echo "done"
+
+echo "installing Gau "
+GO111MODULE=on go get -u -v github.com/lc/gau
+echo "done"
+
+
 
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
