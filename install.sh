@@ -172,7 +172,7 @@ echo "installing waybackurls"
 go get github.com/tomnomnom/waybackurls
 echo "done"
 
-echo "installing assetfinder"
+echo "installing  assetfinder"
 go get -u github.com/tomnomnom/assetfinder
 echo "done"
 
