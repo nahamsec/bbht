@@ -69,7 +69,7 @@ echo "Don't forget to set up AWS credentials!"
 
 
 #create a tools folder in ~/
-mkdir ~/tools
+mkdir -p ~/tools
 cd ~/tools/
 
 #install aquatone
