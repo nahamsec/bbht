@@ -284,4 +284,135 @@ chmod +x findom-xss.sh
 mv findom-xss.sh /usr/bin/findomxss
 echo "Done"
 
+# Install tlder
+echo "Installing Tlder"
+go install github.com/dwisiswant0/tlder@latest
+echo "done"
+
+# Install go-dork
+echo "Installing go-dork"
+GO111MODULE=on go install dw1.io/go-dork@latest
+echo "done"
+
+# Install subzy
+echo "Installing subzy"
+go get -u -v github.com/lukasikic/subzy
+go install -v github.com/lukasikic/subzy@latest
+echo "done"
+
+# Install cariddi
+echo "Installing cariddi"
+git clone https://github.com/edoardottt/cariddi.git
+cd cariddi
+make linux
+rm -rf ../cariddi
+echo "Done"
+
+# Install bbscope
+echo "Installing bbscope"
+go install github.com/edoardottt/lit-bb-hack-tools/bbscope@latest
+echo "Done"
+
+# Install bbtargets
+echo "Installing bbtargets"
+go install github.com/edoardottt/lit-bb-hack-tools/bbtargets@latest
+echo "Done"
+
+# Install doomxss
+echo "Installing doomxss"
+go install github.com/edoardottt/lit-bb-hack-tools/doomxss@latest
+echo "Done"
+
+# Install eefjsf
+echo "Installing eefjsf"
+go install github.com/edoardottt/lit-bb-hack-tools/eefjsf@latest
+echo "Done"
+
+# Install robotstxt
+echo "Installing robots.txt"
+go install github.com/edoardottt/lit-bb-hack-tools/robotstxt@latest
+echo "Done"
+
+# Install proxyfor
+echo "Installing proxyfor"
+go install github.com/0xsha/ProxyFor@latest
+echo "Done"
+
+# Install getJS
+echo "Installing getJS"
+go get github.com/003random/getJS
+echo "Done"
+
+# Install ppmap
+echo "Installing ppmap
+go install github.com/kleiton0x00/ppmap@latest
+echo "Done"
+
+# Install Gxss
+echo "Installing Gxss"
+go install github.com/KathanP19/Gxss@latest
+echo "Done"
+
+# Install cent
+echo "Installing cent"
+GO111MODULE=on go get -u github.com/xm1k3/cent
+echo "Done"
+
+# Install asnip
+echo "Installing asnip"
+go get -u github.com/harleo/asnip
+echo "Done"
+
+# Install knocknock
+echo "Installing knocknock"
+go get -u github.com/harleo/asnip
+echo "Done"
+
+# Install gotator 
+echo "Installing gotator"
+go get github.com/Josue87/gotator
+echo "Done"
+
+# Install sigurlfind3r
+echo "Installing sigurlfind3r"
+go install -v github.com/signedsecurity/sigurlfind3r/cmd/sigurlfind3r@latest
+echo "Done"
+
+# Install wordlistgen
+echo "Installing wordlistgen"
+go get -u github.com/ameenmaali/wordlistgen
+echo "Done"
+
+# Install jsubfinder
+echo "Installing jsubfinder"
+go install github.com/hiddengearz/jsubfinder@latest
+echo "Done"
+
+# Install PostmessageFinder
+echo "Installing postmessageFinder"
+go get github.com/pelaohxc/postMessageFinder
+echo "Done"
+
+# Install roboxtractor
+echo "Installing roboxtractor"
+go get -u github.com/Josue87/roboxtractor
+echo "Done"
+
+# Install fdns-search
+echo "Installing fdns-search"
+go install github.com/nscuro/fdnssearch/cmd/fdnssearch@latest
+echo "Done"
+
+# Install sshchecker
+echo "Installing sshchecker"
+go get -u -v github.com/lazytools/sshchecker/cmd/sshchecker
+echo "Done"
+
+# Install xurls
+echo "Installing xurls"
+go get -u github.com/vsec7/xurls
+echo "Done"
+
+
+
 
