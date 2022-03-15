@@ -499,6 +499,13 @@ python3 setup.py install
 cd ~/tools
 echo "Done"
 
+# Install Censys-subdomain-finder
+echo "Installing Censys-subdomain-finder"
+git clone https://github.com/christophetd/censys-subdomain-finder
+cd censys-subdomain-finder
+pip3 install -r requirements.txt
+cd ~/tools
+echo "Done"
 
 
 
