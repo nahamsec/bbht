@@ -607,4 +607,13 @@ mv fhc-linux /usr/bin/fhc
 cd ~/tools
 echo "Done"
 
+# Install Unimap
+echo "Installing Unimap"
+wget https://github.com/Edu4rdSHL/unimap/releases/download/0.5.1/unimap-linux
+chmod +x unimap-linux
+mv unimap-linux /usr/bin/unimap
+cd ~/tools
+echo "Done"
+
+
 
