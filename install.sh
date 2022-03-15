@@ -532,4 +532,12 @@ cd Interlace
 python3 setup.py install
 echo "Done"
 
+# Install Dome
+echo "Installing Dome"
+git clone https://github.com/v4d1/Dome
+cd Dome
+pip3 install -r requirements.txt
+cd ~/tools
+echo "Done"
+
 
