@@ -470,6 +470,21 @@ echo "Installing fff"
 go get -u github.com/tomnomnom/fff
 echo "Done"
 
+# Install Github-endpoints
+echo "Installing github-endpoints"
+go get -u github.com/gwen001/github-endpoints
+echo "Done"
+
+# Install Github-regexp
+echo "Installing github-regexp"
+go get -u github.com/gwen001/github-regexp
+echo "Done"
+
+# Install Github-subdomains
+echo "Installing github-subdomains"
+go get -u github.com/gwen001/github-subdomains
+echo "Done"
+
 echo "Installing Python tools"
 
 mkdir ~/tools
