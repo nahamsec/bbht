@@ -591,3 +591,20 @@ pip3 install -r requirements.txt
 cd ~/tools
 echo "done"
 
+# Install Findomain
+echo "Installing Findomain"
+wget https://github.com/findomain/findomain/releases/latest/download/findomain-linux
+chmod +x findomain-linux 
+mv findomain-linux /usr/bin/findomain
+cd ~/tools
+echo "done"
+
+# Install Fast-HTTP-Checker
+echo "Installing fhc"
+wget https://github.com/Edu4rdSHL/fhc/releases/download/0.6.1/fhc-linux
+chmod +x fhc-linux 
+mv fhc-linux /usr/bin/fhc
+cd ~/tools
+echo "Done"
+
+
