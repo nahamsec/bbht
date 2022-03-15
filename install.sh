@@ -567,4 +567,10 @@ pip3 install -r requirements.txt
 cd ~/tools
 echo "Done"
 
-
+# Install AutoSSRF
+echo "Installing AutoSSRF"
+git clone https://github.com/Th0h0/autossrf.git
+cd autossrf 
+pip3 install -r requirements.txt
+cd ~/tools
+echo "Done"
