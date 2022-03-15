@@ -559,3 +559,12 @@ pip3 install -r requirements.txt
 cd ~/tools
 echo "Done"
 
+# Install Autoredirect
+echo "Installing Autoredirect"
+git clone https://github.com/Th0h0/autoredirect
+cd autoredirect 
+pip3 install -r requirements.txt
+cd ~/tools
+echo "Done"
+
+
