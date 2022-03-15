@@ -17,6 +17,7 @@ sudo apt-get install -y python-dnspython
 sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
+sudo apt install -y libpcap-dev
 
 echo "installing bash_profile aliases from recon_profile"
 git clone https://github.com/nahamsec/recon_profile.git
@@ -66,127 +67,149 @@ echo "Don't forget to set up AWS credentials!"
 apt install -y awscli
 echo "Don't forget to set up AWS credentials!"
 
+# Installing nuclei
+echo "Installing Nuclei"
+go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+echo "Done"
 
+# Installing Subfinder 
+echo "Installing Subfinder"
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+echo "Done"
 
-#create a tools folder in ~/
-mkdir ~/tools
-cd ~/tools/
+# Installing Naabu
+echo "Installing Naabu"
+go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+echo "Done"
 
-#install aquatone
-echo "Installing Aquatone"
-go get github.com/michenriksen/aquatone
-echo "done"
+# Intsall DNSx
+echo "Installing dnsx"
+go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+echo "Done"
 
-#install chromium
-echo "Installing Chromium"
-sudo snap install chromium
-echo "done"
+# Installing Shuffledns
+echo "Install Shuffledns"
+go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest
+echo "Done"
 
-echo "installing JSParser"
-git clone https://github.com/nahamsec/JSParser.git
-cd JSParser*
-sudo python setup.py install
-cd ~/tools/
-echo "done"
+# Installing Interactsh
+echo "Installing Interactsh"
+go install -v github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest
+echo "Done"
 
-echo "installing Sublist3r"
-git clone https://github.com/aboul3la/Sublist3r.git
-cd Sublist3r*
-pip install -r requirements.txt
-cd ~/tools/
-echo "done"
+# Installing HTTPx
+echo "Installing HTTPx"
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+echo "Done"
 
+# Installing Notify
+echo "Installing Notify"
+go install -v github.com/projectdiscovery/notify/cmd/notify@latest
+echo "Done"
 
-echo "installing teh_s3_bucketeers"
-git clone https://github.com/tomdev/teh_s3_bucketeers.git
-cd ~/tools/
-echo "done"
+# Installing Mapcidr
+echo "Installing mapcidr"
+GO111MODULE=on go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr
+echo "Done"
 
+# Installing chaos-client
+echo "Installing chaos-client"
+go install -v github.com/projectdiscovery/chaos-client/cmd/chaos@latest
+echo "Done"
 
-echo "installing wpscan"
-git clone https://github.com/wpscanteam/wpscan.git
-cd wpscan*
-sudo gem install bundler && bundle install --without test
-cd ~/tools/
-echo "done"
+# Installing Uncover
+echo "Installing Uncover"
+go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest
+echo "Done"
 
-echo "installing dirsearch"
-git clone https://github.com/maurosoria/dirsearch.git
-cd ~/tools/
-echo "done"
+# Install hakrevdns
+echo "Installing Hakrevdns"
+go install github.com/hakluke/hakrevdns@latest
+echo "Done"
 
+# Install hakrawler
+echo "Installing hakrawler"
+go install github.com/hakluke/hakrawler@latest
+echo "Done"
 
-echo "installing lazys3"
-git clone https://github.com/nahamsec/lazys3.git
-cd ~/tools/
-echo "done"
+# Install haktldextract
+echo "Installing haktldextract"
+go install github.com/hakluke/haktldextract@latest
+echo "Done"
 
-echo "installing virtual host discovery"
-git clone https://github.com/jobertabma/virtual-host-discovery.git
-cd ~/tools/
-echo "done"
+# Install hakcheckurl
+echo "Installing hakcheckurl"
+go install github.com/hakluke/hakcheckurl@latest
+echo "Done"
 
+# Install hakfindinternaldomains
+echo "Install hakfindinternaldomains"
+go install github.com/hakluke/hakfindinternaldomains
+echo "Done"
 
-echo "installing sqlmap"
-git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
-cd ~/tools/
-echo "done"
+# Install haktrails
+echo "Install haktrails"
+go install -v github.com/hakluke/haktrails@latest
+echo "Done"
 
-echo "installing knock.py"
-git clone https://github.com/guelfoweb/knock.git
-cd ~/tools/
-echo "done"
+# Install haklistgen
+echo "Install haklistgen"
+go install github.com/hakluke/haklistgen@latest
+echo "Done"
 
-echo "installing lazyrecon"
-git clone https://github.com/nahamsec/lazyrecon.git
-cd ~/tools/
-echo "done"
+# Install hakcsp 
+echo "Installing hakcsp"
+go get github.com/hakluke/hakcsp
+echo "Done"
 
-echo "installing nmap"
-sudo apt-get install -y nmap
-echo "done"
+# Install hakurlencode
+echo "Installing hakurlencode"
+go get github.com/hakluke/hakurlencode
+echo "Done"
 
-echo "installing massdns"
-git clone https://github.com/blechschmidt/massdns.git
-cd ~/tools/massdns
-make
-cd ~/tools/
-echo "done"
+# Install hakgzsplit
+echo "Installing hakgzsplit"
+go get -u github.com/hakluke/hakgzsplit
+echo "Done"
 
-echo "installing asnlookup"
-git clone https://github.com/yassineaboukir/asnlookup.git
-cd ~/tools/asnlookup
-pip install -r requirements.txt
-cd ~/tools/
-echo "done"
+# Install hakaxfr
+echo "Installing hakaxfr"
+go install github.com/hakluke/hakaxfr@latest
+echo "Done"
 
-echo "installing httprobe"
-go get -u github.com/tomnomnom/httprobe 
-echo "done"
+# Install hakcron
+echo "Installing hakcron"
+go install github.com/hakluke/hakcron@latest
+echo "Done"
 
-echo "installing unfurl"
-go get -u github.com/tomnomnom/unfurl 
-echo "done"
+# Install gau
+echo "Installing gau"
+go install github.com/lc/gau/v2/cmd/gau@latest
+echo "Done"
 
-echo "installing waybackurls"
-go get github.com/tomnomnom/waybackurls
-echo "done"
+# Install subjs
+echo "Installing gau"
+GO111MODULE=on go get -u -v github.com/lc/subjs@latest
+echo "Done"
 
-echo "installing crtndstry"
-git clone https://github.com/nahamsec/crtndstry.git
-echo "done"
+# Install ffuf
+echo "Installing ffuf"
+go install github.com/ffuf/ffuf@latest
+echo "Done"
 
-echo "downloading Seclists"
-cd ~/tools/
-git clone https://github.com/danielmiessler/SecLists.git
-cd ~/tools/SecLists/Discovery/DNS/
-##THIS FILE BREAKS MASSDNS AND NEEDS TO BE CLEANED
-cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
-cd ~/tools/
-echo "done"
+# Install secretz
+echo "Installing secretz"
+go get -u github.com/lc/secretz
+echo "Done"
 
+# Install brute53
+echo "Installing brute53"
+go get -u github.com/lc/brute53
+echo "Done"
 
+# Install otxurls
+echo "Installing otxurls"
+go get github.com/lc/otxurls
+echo "Done"
 
-echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
-ls -la
-echo "One last time: don't forget to set up AWS credentials in ~/.aws/!"
+# 
