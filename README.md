@@ -1,26 +1,7 @@
-# BBHT
+# Bugbounty Hunting Toolkit
 
-Bug Bounty Hunting Tools is a script to install the most popular tools used while looking for vulnerabilities for a bug bounty program.
- 
-# Tools
-
-- dirsearch
-- JSParser
-- knockpy
-- lazys3
-- recon_profile
-- sqlmap-dev
-- Sublist3r
-- teh_s3_bucketeers
-- virtual-host-discovery
-- wpscan
-- webscreenshot
-- Massdns
-- Asnlookup
-- Unfurl
-- Waybackurls
-- Httprobe
-- Seclists collection
+This Repo is the fork of Nahamsec Bohr where I have updated each and every tools for everyday use and up to date 
+Now which supports the latest version of Ubuntu 21.10 
 
 This script also grabs the aliases created and published here:
 https://github.com/nahamsec/recon_profile
