@@ -574,3 +574,11 @@ cd autossrf
 pip3 install -r requirements.txt
 cd ~/tools
 echo "Done"
+
+# Install AutoPoisoner
+echo "Install Autopoisoner"
+git clone https://github.com/Th0h0/autopoisoner.git
+cd autopoisoner
+pip3 install requests
+cd ~/tools
+echo "done"
