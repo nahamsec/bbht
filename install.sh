@@ -491,6 +491,13 @@ pip3 install -r requirements.txt
 cd ~/tools
 echo "Done"
 
+# Install VhostScan
+echo "Installing VHostScan"
+git clone https://github.com/codingo/VHostScan
+cd VHostScan
+python3 setup.py install
+cd ~/tools
+echo "Done"
 
 
 
