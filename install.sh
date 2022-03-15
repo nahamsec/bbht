@@ -18,6 +18,8 @@ sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
 sudo apt install -y libpcap-dev
+sudo apt install cargo
+sudo apt install make
 
 echo "installing bash_profile aliases from recon_profile"
 git clone https://github.com/nahamsec/recon_profile.git
