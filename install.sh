@@ -515,7 +515,15 @@ pip3 install -r requirements.txt
 cd ~/tools
 echo "Done"
 
+# Install apkleaks
+echo "Installing APKleaks"
+pip3 install apkleaks
+echo "Done"
 
+# Install dora
+echo "Install Dora"
+pip3 install dora
+echo "Done"
 
 
 
