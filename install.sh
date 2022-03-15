@@ -540,4 +540,9 @@ pip3 install -r requirements.txt
 cd ~/tools
 echo "Done"
 
+# Install Tugarecon
+echo "Installing Tugarecon"
+git clone https://github.com/skynet0x01/tugarecon
+cd ~/tools
+echo "Done"
 
