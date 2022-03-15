@@ -551,4 +551,11 @@ echo "Installing Bhedak"
 pip3 install bhedak
 echo "Done"
 
+# Install Pathbuster
+echo "Installing pathbuster"
+git clone https://github.com/rivalsec/pathbuster
+cd pathbuster
+pip3 install -r requirements.txt
+cd ~/tools
+echo "Done"
 
