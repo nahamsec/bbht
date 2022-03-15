@@ -413,6 +413,62 @@ echo "Installing xurls"
 go get -u github.com/vsec7/xurls
 echo "Done"
 
+# Install gctsubdomains
+echo "Installing gctsubdomains"
+go get github.com/lord3ver/gctsubdomains
+echo "Done"
+
+# Install redirex
+echo "Installing redirex"
+go install github.com/wfinn/redirex@latest
+echo "Done"
+
+# Install nicloud
+echo "Installing nicloud"
+go get github.com/i5nipe/nicloud
+echo "Done"
+
+# Install Meg
+echo "Installing Meg"
+go get -u github.com/tomnomnom/meg
+echo "Done"
+
+# Install waybackurls
+echo "Installing waybackurls"
+go get github.com/tomnomnom/waybackurls
+echo "Done"
+
+# Install Gf
+echo "Installing gf"
+go get -u github.com/tomnomnom/gf
+echo "Done"
+
+# Install httprobe
+echo "Installing httprobe"
+go get -u github.com/tomnomnom/httprobe
+echo "Done"
+
+# Install anew
+echo "Installing anew"
+go get -u github.com/tomnomnom/anew
+echo "Done"
+
+# Install assetfinder 
+echo "Installing assetfinder"
+go get -u github.com/tomnomnom/assetfinder
+echo "Done"
+
+# Install qsreplace
+echo "Installing qsreplace"
+go get -u github.com/tomnomnom/qsreplace
+echo "Done"
+
+# Install fff
+echo "Installing fff"
+go get -u github.com/tomnomnom/fff
+echo "Done"
+
+
 
 
 
