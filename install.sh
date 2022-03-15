@@ -485,6 +485,11 @@ echo "Installing github-subdomains"
 go get -u github.com/gwen001/github-subdomains
 echo "Done"
 
+# Install Tew
+echo "Installing Tew"
+go install github.com/pry0cc/tew@latest
+echo "Done"
+
 echo "Installing Python tools"
 
 mkdir ~/tools
