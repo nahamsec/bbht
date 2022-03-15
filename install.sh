@@ -507,5 +507,15 @@ pip3 install -r requirements.txt
 cd ~/tools
 echo "Done"
 
+# Install GitRob
+echo "Installing Gitrob"
+git clone https://github.com/hisxo/gitGraber
+cd gitGraber
+pip3 install -r requirements.txt
+cd ~/tools
+echo "Done"
+
+
+
 
 
