@@ -525,5 +525,11 @@ echo "Install Dora"
 pip3 install dora
 echo "Done"
 
+# Install Interlace
+echo "Installing Interlace"
+git clone https://github.com/codingo/Interlace
+cd Interlace
+python3 setup.py install
+echo "Done"
 
 
