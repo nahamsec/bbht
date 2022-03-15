@@ -470,6 +470,27 @@ echo "Installing fff"
 go get -u github.com/tomnomnom/fff
 echo "Done"
 
+echo "Installing Python tools"
+
+mkdir ~/tools
+cd ~/tools
+
+# Install dirsearch
+echo "Installing dirsearch"
+git clone https://github.com/maurosoria/dirsearch
+cd dirsearch
+pip3 install -r requirements.txt
+cd ~/tools
+echo "Done"
+
+# Install Paramspider
+echo "Installing Paramspider"
+git clone https://github.com/devanshbatham/ParamSpider
+cd Paramspider 
+pip3 install -r requirements.txt
+cd ~/tools
+echo "Done"
+
 
 
 
