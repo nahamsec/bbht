@@ -212,4 +212,76 @@ echo "Installing otxurls"
 go get github.com/lc/otxurls
 echo "Done"
 
-# 
+# Installing Osmedeus
+echo "Installing Osmedeus"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/osmedeus/osmedeus-base/master/install.sh)"
+echo "Done"
+
+# Install Metabigor
+echo "Installing metabigor"
+GO111MODULE=on go get github.com/j3ssie/metabigor
+echo "Done"
+
+# Install cinfo
+echo "Installing Cinfo"
+GO111MODULE=on go get -u github.com/j3ssie/cinfo
+echo "Done"
+
+# Install dalfox
+echo "Installing Dalfox"
+go install github.com/hahwul/dalfox/v2@latest
+echo "Done"
+
+# Install Web-Cache-Vulnerability-Scanner
+echo "Installing Web-Cache-Vulnerability-Scanner"
+go install -v github.com/Hackmanit/Web-Cache-Vulnerability-Scanner@latest
+echo "Done"
+
+# Install gitls
+echo "Installing gitls"
+GO111MODULE=on go get -v github.com/hahwul/gitls
+echo "Done"
+
+# Install Licaner
+echo "Installing Licaner"
+go install github.com/hahwul/licaner@latest
+echo "Done"
+
+# Install URLhunter
+echo "Installing URLHunter"
+go get -u github.com/utkusen/urlhunter
+echo "Done"
+
+# Install puredns
+echo "Installing puredns"
+go install github.com/d3mondev/puredns/v2@latest
+echo "Done"
+
+# Install wadl-dumper
+echo "Installing wadl-dumper"
+go get github.com/dwisiswant0/wadl-dumper
+echo "Done"
+
+# Install crlfuzz
+echo "Installing crlfuzz"
+GO111MODULE=on go install github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest
+echo "Done"
+
+# Install Galer
+echo "Installing galer"
+GO111MODULE=on go get github.com/dwisiswant0/galer
+echo "Done"
+
+# Install go-stare
+echo "Installing go-stare"
+GO111MODULE=on go get -v github.com/dwisiswant0/go-stare
+echo "Done"
+
+# Install findom-xss
+echo "Installing findom-xss"
+wget https://raw.githubusercontent.com/dwisiswant0/findom-xss/master/findom-xss.sh
+chmod +x findom-xss.sh
+mv findom-xss.sh /usr/bin/findomxss
+echo "Done"
+
+
