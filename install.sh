@@ -576,9 +576,18 @@ cd ~/tools
 echo "Done"
 
 # Install AutoPoisoner
-echo "Install Autopoisoner"
+echo "Installing Autopoisoner"
 git clone https://github.com/Th0h0/autopoisoner.git
 cd autopoisoner
 pip3 install requests
 cd ~/tools
 echo "done"
+
+# Install Sourcewolf
+echo "Installing Sourcewolf"
+git clone https://github.com/ksharinarayanan/SourceWolf
+cd SourceWolf
+pip3 install -r requirements.txt
+cd ~/tools
+echo "done"
+
