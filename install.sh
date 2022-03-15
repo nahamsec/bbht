@@ -546,3 +546,9 @@ git clone https://github.com/skynet0x01/tugarecon
 cd ~/tools
 echo "Done"
 
+# Install Bhedak 
+echo "Installing Bhedak"
+pip3 install bhedak
+echo "Done"
+
+
