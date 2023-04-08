@@ -38,7 +38,7 @@ select choice in "${choices[@]}"; do
                 yes)
 
 					echo "Installing Golang"
-					wget https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
+					wget https://go.dev/dl/go1.20.1.linux-amd64.tar.gz
 					sudo tar -xvf go1.13.4.linux-amd64.tar.gz
 					sudo mv go /usr/local
 					export GOROOT=/usr/local/go
@@ -74,7 +74,7 @@ cd ~/tools/
 
 #install aquatone
 echo "Installing Aquatone"
-go get github.com/michenriksen/aquatone
+go install -v github.com/michenriksen/aquatone@latest
 echo "done"
 
 #install chromium
@@ -161,15 +161,15 @@ cd ~/tools/
 echo "done"
 
 echo "installing httprobe"
-go get -u github.com/tomnomnom/httprobe 
+go install -v -u github.com/tomnomnom/httprobe@master
 echo "done"
 
 echo "installing unfurl"
-go get -u github.com/tomnomnom/unfurl 
+go install github.com/tomnomnom/unfurl@master 
 echo "done"
 
 echo "installing waybackurls"
-go get github.com/tomnomnom/waybackurls
+go install -v github.com/tomnomnom/waybackurls@latest
 echo "done"
 
 echo "installing crtndstry"
